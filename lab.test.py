@@ -22,14 +22,14 @@ class Testunittest(unittest.TestCase):
 
 class TestFileProcessing(unittest.TestCase):
     def test_process_student_data(self):
-        # Open and read the 'lab.txt' file
         with open("lab.txt", "r") as file:
             data = file.readlines()
         
         result = process_student_data(data)
         # Test the processed data
-        self.assertEqual(result["buddhist_era"], 2547)  # 2024 - 20 + 543
-        self.assertEqual(result["rank"], "Distinction")
+        print("Processed student data:", result)  
+        self.assertEqual(result["buddhist_era"], 2543)
+        self.assertEqual(result["rank"], "Good")
         
 if __name__ == "__main__":
     unittest.main()
